@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin")
 module.exports = {
     entry: "./src/main.tsx",
 
+    // TODO
     mode: "production",
 
     // Enable sourcemaps for debugging webpack's output.
