@@ -33,4 +33,7 @@ changing something in the build.
 -   inline doc in Makefile
 -   disable source maps for production build
 -   readme on how to run stuff
--   get rid of dev webpack script tags
+
+### Not a goal now
+
+-   Separate React into its own library
