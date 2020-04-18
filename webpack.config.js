@@ -1,4 +1,6 @@
 module.exports = {
+    entry: "./src/main.tsx",
+
     mode: "production",
 
     // Enable sourcemaps for debugging webpack's output.
