@@ -7,3 +7,13 @@ fmt:
 		'./**/*.{css,html,js,json,md,scss,ts,tsx,yml,yaml}' \
 		'!./**/dist/**' \
 		'!./package*.json'
+
+.PHONY: run
+run:
+	npx webpack-dev-server \
+		--mode=development
+
+.PHONY: build
+build:
+	npx webpack \
+		--mode=production

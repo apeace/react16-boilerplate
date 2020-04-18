@@ -29,3 +29,8 @@ changing something in the build.
 -   Built-in "fake mode"
 -   Additional tsconfig options?
 -   Document all dev dependencies.
+-   favicon
+-   inline doc in Makefile
+-   disable source maps for production build
+-   readme on how to run stuff
+-   get rid of dev webpack script tags
