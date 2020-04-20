@@ -2,6 +2,7 @@
 // See: https://webpack.js.org/configuration/
 
 const path = require("path")
+const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin")
 
@@ -10,14 +11,14 @@ const distDir = path.resolve("./dist")
 // We export a function instead of a raw object so that we can detect
 // which environment we're building for.
 // See: https://webpack.js.org/configuration/mode/
-module.exports = (env, args) => {
-    const isDev = env === "development"
-    const isProd = env === "production"
+module.exports = (env, argv) => {
+    const isDev = argv.mode === "development"
+    const isProd = argv.mode === "production"
 
     // Basic config. Start in main.tsx and load all
     // JS/TS files.
     const config = {
-        mode: env,
+        mode: argv.mode,
         entry: "./src/main.tsx",
         resolve: {
             extensions: [".js", ".ts", ".tsx"],
@@ -69,6 +70,11 @@ module.exports = (env, args) => {
             template: "./src/index.html",
         })
     )
+
+    // In prod mode, wipe the dist/ directory.
+    if (isProd) {
+        config.plugins.unshift(new CleanWebpackPlugin())
+    }
 
     // In dev mode, generate source maps.
     if (isDev) {

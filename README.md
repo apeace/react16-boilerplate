@@ -40,7 +40,6 @@ another problem changing something in the build.
 -   add the moment webpack plugin
 -   get rid of react imports
 -   add normalize.css
--   wipe dist
 
 ## Not a goal right now
 
