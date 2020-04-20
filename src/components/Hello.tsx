@@ -1,18 +1,7 @@
 import * as React from "react"
-import styled from "styled-components"
 
 import partyparrot from "../assets/images/partyparrot.gif"
-
-const Styled = styled.div`
-    .outer {
-        width: 100vw;
-        text-align: center;
-
-        h1 {
-            color: blue;
-        }
-    }
-`
+import "./Hello.scss"
 
 export interface HelloProps {
     compiler: string
@@ -20,7 +9,7 @@ export interface HelloProps {
 }
 
 export const Hello = (props: HelloProps) => (
-    <Styled>
+    <div className="Hello">
         <div className="outer">
             <h1>
                 Hello from {props.compiler} and {props.framework}!
@@ -29,5 +18,5 @@ export const Hello = (props: HelloProps) => (
                 <img src={partyparrot} />
             </p>
         </div>
-    </Styled>
+    </div>
 )

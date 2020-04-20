@@ -1,6 +1,7 @@
 /*
 
-These are required in order to not throw errors when importing images.
+These are required in order to not throw errors when importing images
+and SCSS styles.
 
 Images are imported using `import foo from "./foo.jpg"`, which is then
 picked up by the file-loader Webpack plugin.
@@ -14,3 +15,4 @@ declare module "*.gif"
 declare module "*.jpg"
 declare module "*.jpeg"
 declare module "*.png"
+declare module "*.scss"

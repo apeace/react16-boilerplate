@@ -60,6 +60,12 @@ module.exports = (env, argv) => {
         use: ["style-loader", "css-loader"],
     })
 
+    // Use style-loader, css-loader, and sass-loader for SCSS.
+    config.module.rules.push({
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+    })
+
     // Use file-loader for images.
     config.module.rules.push({
         test: /\.(jpg|jpeg|gif|png)$/,
