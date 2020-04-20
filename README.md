@@ -18,10 +18,25 @@ another problem changing something in the build.
 
 -   Write code in strict Typescript, including JSX templates.
 -   Testing for library functions and React components, both using Mocha.
+-   Style components with SASS.
 -   Hot-reloading dev server with sourcemaps.
 -   Auto code formatting.
 -   Use `make` to run build commands.
 -   Normalize.css built in.
+
+## How to do stuff
+
+If you run `make help`, every make command is documented:
+
+```
+$ make help
+test                            Run both library tests and component tests.
+test-lib                        Run just library tests (no Webpack involved).
+test-components                 Run just component tests (uses webpack.test.config.js)
+run                             Run the dev server.
+build                           Run a production build.
+fmt                             Auto-format the codebase.
+```
 
 ## Suggestions for the user
 
@@ -30,14 +45,11 @@ another problem changing something in the build.
 
 ## TODO
 
--   Built-in "fake mode"
--   Additional tsconfig options?
+-   Add react-router.
 -   Document all dev dependencies.
--   favicon
--   inline doc in Makefile
--   readme on how to run stuff
--   add the moment webpack plugin
--   add router
+-   Favicon.
+-   Add the moment webpack plugin.
+-   Built-in "fake mode".
 
 ## Not a goal right now
 
