@@ -38,6 +38,7 @@ another problem changing something in the build.
 -   testing
 -   add the moment webpack plugin
 -   get rid of react imports
+-   add router
 
 ## Not a goal right now
 

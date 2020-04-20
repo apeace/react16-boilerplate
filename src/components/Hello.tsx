@@ -11,9 +11,9 @@ export interface HelloProps {
 export const Hello = (props: HelloProps) => (
     <div className="Hello">
         <div className="outer">
-            <h1>
+            <p>
                 Hello from {props.compiler} and {props.framework}!
-            </h1>
+            </p>
             <p>
                 <img src={partyparrot} />
             </p>
