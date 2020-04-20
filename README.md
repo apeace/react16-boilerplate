@@ -17,9 +17,10 @@ another problem changing something in the build.
 ## Features
 
 -   Write code in strict Typescript, including JSX templates.
+-   Testing for library functions and React components, both using Mocha.
+-   Hot-reloading dev server with sourcemaps.
 -   Auto code formatting.
 -   Use `make` to run build commands.
--   Hot-reloading dev server with sourcemaps.
 -   Normalize.css built in.
 
 ## Suggestions for the user
@@ -35,9 +36,7 @@ another problem changing something in the build.
 -   favicon
 -   inline doc in Makefile
 -   readme on how to run stuff
--   testing
 -   add the moment webpack plugin
--   get rid of react imports
 -   add router
 
 ## Not a goal right now
