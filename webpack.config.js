@@ -54,6 +54,12 @@ module.exports = (env, argv) => {
         ],
     })
 
+    // Use style-loader and css-loader for CSS.
+    config.module.rules.push({
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+    })
+
     // Use file-loader for images.
     config.module.rules.push({
         test: /\.(jpg|jpeg|gif|png)$/,
@@ -79,7 +85,7 @@ module.exports = (env, argv) => {
     // In dev mode, generate source maps.
     if (isDev) {
         config.devtool = "source-map"
-        config.modules.rules.push({
+        config.module.rules.push({
             enforce: "pre",
             test: /\.js$/,
             loader: "source-map-loader",

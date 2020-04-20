@@ -20,6 +20,7 @@ another problem changing something in the build.
 -   Auto code formatting.
 -   Use `make` to run build commands.
 -   Hot-reloading dev server with sourcemaps.
+-   Normalize.css built in.
 
 ## Suggestions for the user
 
@@ -35,11 +36,9 @@ another problem changing something in the build.
 -   inline doc in Makefile
 -   readme on how to run stuff
 -   scss
--   allow for custom TS declarations
 -   testing
 -   add the moment webpack plugin
 -   get rid of react imports
--   add normalize.css
 
 ## Not a goal right now
 
