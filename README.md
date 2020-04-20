@@ -35,7 +35,6 @@ another problem changing something in the build.
 -   favicon
 -   inline doc in Makefile
 -   readme on how to run stuff
--   scss
 -   testing
 -   add the moment webpack plugin
 -   get rid of react imports
@@ -43,3 +42,13 @@ another problem changing something in the build.
 ## Not a goal right now
 
 -   Separate React into its own bundle.
+
+## Thoughts
+
+### Why not use `styled-components`?
+
+I prefer to use SASS because it offers mixins. I also prefer to define things like color variables
+in SASS instead of Javascript. I haven't been able to get SASS to play nicely with
+`styled-components`. Unfortunately this means we miss out on the nice style scoping that comes with
+`styled-components`. But as long as component names are unique, we can scope all styles inside of a
+`.ComponentName` class.
