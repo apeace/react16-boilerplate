@@ -23,7 +23,8 @@ another problem changing something in the build.
 
 ## Suggestions for the user
 
--   Configure your text editor to format using `prettier`.
+-   Configure your text editor to format using `prettier`. Make sure it matches what `make fmt`
+    does.
 
 ## TODO
 
@@ -32,14 +33,13 @@ another problem changing something in the build.
 -   Document all dev dependencies.
 -   favicon
 -   inline doc in Makefile
--   disable source maps for production build
 -   readme on how to run stuff
 -   scss
 -   allow for custom TS declarations
 -   testing
--   name output files with a hash
 -   add the moment webpack plugin
+-   make sure images work lol
 
-## Not a goal now
+## Not a goal right now
 
--   Separate React into its own library
+-   Separate React into its own bundle.
