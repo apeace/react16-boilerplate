@@ -9,6 +9,6 @@ import "normalize.css"
 import { Hello } from "./components/Hello"
 
 ReactDOM.render(
-    <Hello compiler="TypeScript" framework="React" />,
+    <Hello compiler="TypeScript" framework="React" n={5} />,
     document.getElementById("example")
 )
