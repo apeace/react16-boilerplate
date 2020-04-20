@@ -38,7 +38,9 @@ another problem changing something in the build.
 -   allow for custom TS declarations
 -   testing
 -   add the moment webpack plugin
--   make sure images work lol
+-   get rid of react imports
+-   add normalize.css
+-   wipe dist
 
 ## Not a goal right now
 

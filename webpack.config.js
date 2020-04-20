@@ -3,6 +3,7 @@
 
 const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
+const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin")
 
 const distDir = path.resolve("./dist")
 
@@ -20,6 +21,15 @@ module.exports = (env, args) => {
         entry: "./src/main.tsx",
         resolve: {
             extensions: [".js", ".ts", ".tsx"],
+            // This resolver plugin tells Webpack to also find module definitions
+            // according to the tsconfig's type roots. This means that if we ever
+            // use a library that doesn't have typings, we can add them ourselves
+            // in ./typings.
+            plugins: [
+                new TsconfigPathsPlugin({
+                    configFile: path.resolve("./tsconfig.json"),
+                }),
+            ],
         },
         output: {
             filename: "[name].[contenthash].js",
@@ -31,8 +41,8 @@ module.exports = (env, args) => {
     config.module = { rules: [] }
 
     // Use ts-loader for Typescript.
-    // Typescript will compile away the TSX syntax as well as compiling
-    // Typescript into Javascript. Therefore this is the only loader we need.
+    // Aside from compiling Typescript into Javascript, it will also compile
+    // JSX syntax into Javascript calls.
     config.module.rules.push({
         test: /\.ts(x?)$/,
         exclude: /node_modules/,
@@ -41,6 +51,12 @@ module.exports = (env, args) => {
                 loader: "ts-loader",
             },
         ],
+    })
+
+    // Use file-loader for images.
+    config.module.rules.push({
+        test: /\.(jpg|jpeg|gif|png)$/,
+        use: ["file-loader"],
     })
 
     // Add plugins.
