@@ -8,7 +8,7 @@ test-lib: ## Run just library tests (no Webpack involved).
 	npx mocha --require ts-node/register src/lib/**/*.test.ts
 
 .PHONY: test-components
-test-components: ## Run just component tests (uses webpack.test.config.js)
+test-components: ## Run just component tests (uses webpack.test.config.js).
 	npx mochapack --webpack-config=./webpack.test.config.js --mode=development src/components/**/*.test.tsx
 
 .PHONY: run

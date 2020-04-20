@@ -46,8 +46,8 @@ fmt                             Auto-format the codebase.
 ## TODO
 
 -   Add react-router.
+-   Add favicon.
 -   Document all dev dependencies.
--   Favicon.
 -   Add the moment webpack plugin.
 -   Built-in "fake mode".
 
