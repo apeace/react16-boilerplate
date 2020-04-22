@@ -45,17 +45,18 @@ fmt                             Auto-format the codebase.
 
 ## TODO
 
--   Add react-router.
+-   Add react-router + layout structure.
 -   Add favicon.
 -   Document all dev dependencies.
 -   Add the moment webpack plugin.
 -   Built-in "fake mode".
+-   Heroku config?
 
 ## Not a goal right now
 
 -   Separate React into its own bundle.
 
-## Thoughts
+## Notes & Gotchas
 
 ### Why not use `styled-components`?
 
@@ -64,3 +65,27 @@ in SASS instead of Javascript. I haven't been able to get SASS to play nicely wi
 `styled-components`. Unfortunately this means we miss out on the nice style scoping that comes with
 `styled-components`. But as long as component names are unique, we can scope all styles inside of a
 `.ComponentName` class.
+
+You are free to install the `styled-components` dependency and use it as usual. You just won't have
+SASS.
+
+### You must import React
+
+Any time you use JSX, you must `import * as React from "react"`. This is because the Typescript
+compiler transforms JSX into `React` calls. And yet, unless you import React, it will assume that
+you've made a mistake by writing JSX. If you forget to do this, you'll see the error message:
+
+```
+TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+```
+
+### What if I want to use a library from NPM and it doesn't have typings?
+
+That's okay. For the purposes of this example, assume you want to use a library `foo`.
+
+1. Go into `typings/` and create `foo.d.ts`.
+2. In that file, type `declare module "foo"`
+
+Now you can import the `foo` library, and Typescript will assume it's an `any` type. Of course, you
+could write your own typings in `foo.d.ts` and describe the shape of the library instead of
+declaring it as `any`, if you want.
