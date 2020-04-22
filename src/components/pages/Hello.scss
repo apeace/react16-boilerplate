@@ -1,7 +1,7 @@
-@import "../lib/scss/colors";
+@import "src/lib/scss/colors";
 
 .Hello {
-    .outer {
+    &_outer {
         width: 100vw;
         text-align: center;
         h1 {

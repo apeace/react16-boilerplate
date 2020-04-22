@@ -1,8 +1,8 @@
 import * as React from "react"
 
-import fib from "../lib/ts/fib"
+import fib from "../../lib/ts/fib"
 
-import partyparrot from "../assets/images/partyparrot.gif"
+import partyparrot from "../../assets/images/partyparrot.gif"
 import "./Hello.scss"
 
 export interface HelloProps {
@@ -13,7 +13,7 @@ export interface HelloProps {
 
 export const Hello = (props: HelloProps) => (
     <div className="Hello">
-        <div className="outer">
+        <div className="Hello_outer">
             <h1 data-qa="greeting">
                 Hello from {props.compiler} and {props.framework}!
             </h1>

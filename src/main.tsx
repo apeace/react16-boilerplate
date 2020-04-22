@@ -4,11 +4,30 @@
  */
 import * as React from "react"
 import * as ReactDOM from "react-dom"
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 
 import "normalize.css"
-import { Hello } from "./components/Hello"
+import { BaseLayout } from "./components/layout/BaseLayout"
+import { Hello } from "./components/pages/Hello"
+import { Blank } from "./components/pages/Blank"
 
-ReactDOM.render(
-    <Hello compiler="TypeScript" framework="React" n={5} />,
-    document.getElementById("example")
-)
+function App() {
+    return (
+        <Router>
+            <BaseLayout>
+                <Link to="/">Home</Link>
+                <Link to="/blank">Blank Page</Link>
+                <Switch>
+                    <Route path="/blank">
+                        <Blank />
+                    </Route>
+                    <Route path="/">
+                        <Hello compiler="TypeScript" framework="React" n={5} />
+                    </Route>
+                </Switch>
+            </BaseLayout>
+        </Router>
+    )
+}
+
+ReactDOM.render(App(), document.getElementById("main"))
