@@ -1,6 +1,21 @@
+@import "../../lib/scss/breakpoints";
+
 .BaseLayout {
-    background: #ddd;
+    background: #eee;
     width: 100vw;
     height: 100vh;
     overflow: auto;
+
+    display: flex;
+    justify-content: center;
+
+    &_outer {
+        $contentPadding: 5px;
+        width: calc(100% - (#{$contentPadding} * 2));
+        padding: 0 $contentPadding;
+        @include largerThan($md + ($contentPadding * 2)) {
+            padding: 0;
+            max-width: $md;
+        }
+    }
 }
