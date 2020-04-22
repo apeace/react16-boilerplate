@@ -4,7 +4,7 @@
  */
 import * as React from "react"
 import * as ReactDOM from "react-dom"
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 import "normalize.css"
 import { BaseLayout } from "./components/layout/BaseLayout"
@@ -15,8 +15,6 @@ function App() {
     return (
         <Router>
             <BaseLayout>
-                <Link to="/">Home</Link>
-                <Link to="/blank">Blank Page</Link>
                 <Switch>
                     <Route path="/blank">
                         <Blank />
