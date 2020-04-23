@@ -7,6 +7,8 @@ import * as ReactDOM from "react-dom"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 import "normalize.css"
+import "./global.scss"
+
 import { BaseLayout } from "./components/layout/BaseLayout"
 import { Hello } from "./components/pages/Hello"
 import { Blank } from "./components/pages/Blank"

@@ -45,7 +45,6 @@ fmt                             Auto-format the codebase.
 
 ## TODO
 
--   Global styles.
 -   Add favicon.
 -   Document all dev dependencies.
 -   Add the moment webpack plugin.
