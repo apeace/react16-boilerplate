@@ -17,9 +17,9 @@ another problem changing something in the build.
 ## Features
 
 -   Write code in strict Typescript, including JSX templates.
--   Testing for library functions and React components, both using Mocha.
+-   Unit tests for library functions and React components, both using Mocha.
 -   Style components with SASS.
--   Hot-reloading dev server with sourcemaps.
+-   Hot-reloading dev server with source maps.
 -   Auto code formatting.
 -   Use `make` to run build commands.
 -   Normalize.css built in.
@@ -37,22 +37,6 @@ run                             Run the dev server.
 build                           Run a production build.
 fmt                             Auto-format the codebase.
 ```
-
-## Suggestions for the user
-
--   Configure your text editor to format using `prettier`. Make sure it matches what `make fmt`
-    does.
-
-## TODO
-
--   Add favicon.
--   Add the moment webpack plugin.
--   Built-in "fake mode".
--   Heroku config?
-
-## Not a goal right now
-
--   Separate React into its own bundle.
 
 ## Notes & Gotchas
 
@@ -93,6 +77,12 @@ That's okay. For the purposes of this example, assume you want to use a library 
 Now you can import the `foo` library, and Typescript will assume it's an `any` type. Of course, you
 could write your own typings in `foo.d.ts` and describe the shape of the library instead of
 declaring it as `any`, if you want.
+
+### Separating dependencies
+
+You could reconfigure Webpack to output React (and/or other libraries) as their own bundle to allow
+for better caching. I've chosen not to do that because I don't need it right now and wanted a
+simpler config.
 
 ## List of production dependencies
 
@@ -162,3 +152,15 @@ A note about `jsdom-global`. This template uses
 [a version](https://github.com/PilotFiber/jsdom-global) I once forked at work, because it fixes
 issues I had accessing jsdom primitives. This is only necessary for certain access patterns. If you
 switch to the [official version](https://github.com/rstacruz/jsdom-global) it should work just fine.
+
+## Suggestions for the user
+
+-   Configure your text editor to format using `prettier`. Make sure it matches what `make fmt`
+    does.
+
+## TODO
+
+-   Add favicon.
+-   Add the moment webpack plugin.
+-   Built-in "fake mode".
+-   Heroku config?
