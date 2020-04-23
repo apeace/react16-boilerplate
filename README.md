@@ -23,6 +23,7 @@ another problem changing something in the build.
 -   Auto code formatting.
 -   Use `make` to run build commands.
 -   Normalize.css built in.
+-   Built-in "fake mode" to easily mock API calls during local development.
 
 ## How to do stuff
 
@@ -161,6 +162,5 @@ switch to the [official version](https://github.com/rstacruz/jsdom-global) it sh
 ## TODO
 
 -   Add the moment webpack plugin.
--   Built-in "fake mode".
 -   Heroku config?
 -   Server-side rendering?

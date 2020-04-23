@@ -2,6 +2,7 @@
 // See: https://webpack.js.org/configuration/
 
 const path = require("path")
+const webpack = require("webpack")
 const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin")
@@ -107,6 +108,13 @@ module.exports = (env, argv) => {
             },
         }
     }
+
+    // Only enable fake mode on dev builds. See lib/ts/testing/fake-mode.ts
+    config.plugins.push(
+        new webpack.DefinePlugin({
+            "process.env.ALLOW_FAKE_MODE": JSON.stringify(isDev),
+        })
+    )
 
     return config
 }

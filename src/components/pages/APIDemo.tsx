@@ -40,7 +40,7 @@ export class APIDemo extends React.Component<APIDemoProps, State> {
 
     render() {
         if (this.state.error) {
-            return <p>Error.</p>
+            return <p>Error. (try adding ?fake to the URL to access fake mode)</p>
         }
         if (this.state.loading) {
             return <p>Loading...</p>
