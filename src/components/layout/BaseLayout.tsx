@@ -2,12 +2,9 @@ import * as React from "react"
 import { NavLink } from "react-router-dom"
 
 import "./BaseLayout.scss"
+import ParentComponent from "../../lib/ts/parent-component"
 
-export interface BaseLayoutProps {
-    // TODO what would the proper type be...
-    // Perhaps make a "BaseProps" that would include common React props stuff.
-    children: any
-}
+export interface BaseLayoutProps extends ParentComponent {}
 
 export const BaseLayout = (props: BaseLayoutProps) => (
     <div className="BaseLayout">
