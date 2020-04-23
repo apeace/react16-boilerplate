@@ -1,6 +1,6 @@
 # react16-app-template
 
-A project template for a React 16 app with Typescript, and all the goodies.
+A project template for a React 16 app, with Typescript and all the goodies.
 
 ## Goals
 
