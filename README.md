@@ -99,6 +99,8 @@ simpler config.
 
 The dependencies which make it into the final, compiled bundle:
 
+-   [moment](https://github.com/moment/moment) - A library for formatting and manipulating dates and
+    times.
 -   [normalize.css](https://github.com/necolas/normalize.css/) - Make default CSS behaviors more
     consistent across browsers.
 -   [react](https://github.com/facebook/react) - A library for writing reusable UI components.
@@ -159,8 +161,6 @@ The dependencies that are used locally during development:
 
 ### Other
 
--   [moment](https://github.com/moment/moment) - A library for formatting and manipulating dates and
-    times.
 -   [prettier](https://github.com/prettier/prettier) - A code formatter.
 
 A note about `jsdom-global`. This template uses
