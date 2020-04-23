@@ -39,6 +39,15 @@ build                           Run a production build.
 fmt                             Auto-format the codebase.
 ```
 
+### Fake mode
+
+Visit `http://localhost:8080/?fake` to access fake mode. You can see in `main.tsx` that we inject a
+fake API object when this mode is activated. Instantiate real vs. fake things here. Fake mode is
+only accessible in the dev build, never production.
+
+You don't need to use this if you have a local version of your API running. But I've found it useful
+for quick prototyping of UIs while mocking out the real API access patterns you will use.
+
 ## Notes & Gotchas
 
 ### You don't need Typescript installed globally
