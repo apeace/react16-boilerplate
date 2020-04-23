@@ -12,17 +12,25 @@ import "./global.scss"
 import { BaseLayout } from "./components/layout/BaseLayout"
 import { Hello } from "./components/pages/Hello"
 import { Blank } from "./components/pages/Blank"
+import { APIDemo } from "./components/pages/APIDemo"
+
+import { FakeAPI } from "./lib/ts/api"
+
+const api = new FakeAPI()
 
 function App() {
     return (
         <Router>
             <BaseLayout>
                 <Switch>
-                    <Route path="/blank">
+                    <Route path="/" exact={true}>
+                        <Hello compiler="TypeScript" framework="React" n={5} />
+                    </Route>
+                    <Route path="/blank" exact={true}>
                         <Blank />
                     </Route>
-                    <Route path="/">
-                        <Hello compiler="TypeScript" framework="React" n={5} />
+                    <Route path="/apidemo" exact={true}>
+                        <APIDemo api={api} />
                     </Route>
                 </Switch>
             </BaseLayout>
