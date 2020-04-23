@@ -80,6 +80,7 @@ module.exports = (env, argv) => {
     config.plugins.push(
         new HtmlWebpackPlugin({
             template: "./src/index.html",
+            favicon: path.resolve("./src/assets/images/peace.gif"),
         })
     )
 

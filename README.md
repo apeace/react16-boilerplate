@@ -160,7 +160,7 @@ switch to the [official version](https://github.com/rstacruz/jsdom-global) it sh
 
 ## TODO
 
--   Add favicon.
 -   Add the moment webpack plugin.
 -   Built-in "fake mode".
 -   Heroku config?
+-   Server-side rendering?
