@@ -24,6 +24,7 @@ another problem changing something in the build.
 -   Use `make` to run build commands.
 -   Normalize.css built in.
 -   Built-in "fake mode" to easily mock API calls during local development.
+-   Remove extraneous moment.js locales.
 
 ## How to do stuff
 
