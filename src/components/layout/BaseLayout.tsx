@@ -16,8 +16,8 @@ export const BaseLayout = (props: BaseLayoutProps) => (
                 <NavLink to="/" activeClassName="active" exact={true}>
                     Home
                 </NavLink>
-                <NavLink to="/blank" activeClassName="active" exact={true}>
-                    Blank Page
+                <NavLink to="/time" activeClassName="active" exact={true}>
+                    Time
                 </NavLink>
                 <NavLink to="/apidemo" activeClassName="active" exact={true}>
                     API Demo

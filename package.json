@@ -2,6 +2,7 @@
   "name": "react16-app-template",
   "version": "1.0.0",
   "dependencies": {
+    "moment": "^2.24.0",
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -24,6 +25,7 @@
     "jsdom-global": "git+https://git@github.com/PilotFiber/jsdom-global.git",
     "mocha": "^7.1.1",
     "mochapack": "^1.1.15",
+    "moment-locales-webpack-plugin": "^1.2.0",
     "node-sass": "^4.13.1",
     "prettier": "^2.0.4",
     "sass-loader": "^8.0.2",

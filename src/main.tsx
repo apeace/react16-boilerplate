@@ -15,7 +15,7 @@ import "./global.scss"
 // Components.
 import { BaseLayout } from "./components/layout/BaseLayout"
 import { Hello } from "./components/pages/Hello"
-import { Blank } from "./components/pages/Blank"
+import { Time } from "./components/pages/Time"
 import { APIDemo } from "./components/pages/APIDemo"
 
 // Internal dependencies.
@@ -44,8 +44,8 @@ function App() {
                     <Route path="/" exact={true}>
                         <Hello compiler="TypeScript" framework="React" n={5} />
                     </Route>
-                    <Route path="/blank" exact={true}>
-                        <Blank />
+                    <Route path="/time" exact={true}>
+                        <Time />
                     </Route>
                     <Route path="/apidemo" exact={true}>
                         <APIDemo api={api} />

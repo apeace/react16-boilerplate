@@ -5,6 +5,7 @@ const path = require("path")
 const webpack = require("webpack")
 const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
+const MomentLocalesPlugin = require("moment-locales-webpack-plugin")
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin")
 
 const distDir = path.resolve("./dist")
@@ -82,6 +83,13 @@ module.exports = (env, argv) => {
         new HtmlWebpackPlugin({
             template: "./src/index.html",
             favicon: path.resolve("./src/assets/images/peace.gif"),
+        })
+    )
+
+    // Only keep the specified moment.js locales (makes bundle smaller).
+    config.plugins.push(
+        new MomentLocalesPlugin({
+            localesToKeep: ["en"],
         })
     )
 

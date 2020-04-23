@@ -127,6 +127,8 @@ The dependencies that are used locally during development:
     file imports, such as images.
 -   [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin) - A Webpack plugin that
     takes an HTML template and injects a script tag with your bundle's name.
+-   [moment-locales-webpack-plugin](https://github.com/iamakulov/moment-locales-webpack-plugin) -
+    Remove unused Moment.js locales.
 -   [node-sass](https://github.com/sass/node-sass) - Node bindings for the SASS compiler.
 -   [sass-loader](https://github.com/webpack-contrib/sass-loader) - A Webpack plugin that compiles
     SASS to CSS.
@@ -157,6 +159,8 @@ The dependencies that are used locally during development:
 
 ### Other
 
+-   [moment](https://github.com/moment/moment) - A library for formatting and manipulating dates and
+    times.
 -   [prettier](https://github.com/prettier/prettier) - A code formatter.
 
 A note about `jsdom-global`. This template uses
@@ -171,6 +175,5 @@ switch to the [official version](https://github.com/rstacruz/jsdom-global) it sh
 
 ## TODO
 
--   Add the moment webpack plugin.
 -   Heroku config?
 -   Server-side rendering?
