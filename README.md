@@ -46,7 +46,8 @@ fake API object when this mode is activated. Instantiate real vs. fake things he
 only accessible in the dev build, never production.
 
 You don't need to use this if you have a local version of your API running. But I've found it useful
-for quick prototyping of UIs while mocking out the real API access patterns you will use.
+for quick prototyping of UIs while mocking out the real API access patterns you will use. Plus, you
+will want fake versions of your API objects for all those component tests you're going to write!
 
 ## Notes & Gotchas
 
