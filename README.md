@@ -1,4 +1,4 @@
-# react16-app-template
+# react16-boilerplate
 
 A project template for a React 16 app, with Typescript and all the goodies.
 
