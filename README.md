@@ -9,9 +9,9 @@ A project template for a React 16 app, with Typescript and all the goodies.
 
 ## Why?
 
-I spent too many days--nay, weeks--of my life fighting against Webpack templates that did way too
+I spent too many days of my life fighting against Webpack templates that did way too
 much for me in ways I didn't understand. There was always one small detail I couldn't figure out how
-to change. One day I decided to write my own Webpack config instead, and since then I've never had
+to change. One day I decided to write my own Webpack config from scratch, and since then I've never had
 another problem changing something in the build.
 
 ## Features
@@ -25,6 +25,7 @@ another problem changing something in the build.
 -   Normalize.css built in.
 -   Built-in "fake mode" to easily mock API calls during local development.
 -   Include moment.js while removing extraneous locales.
+-   The Webpack config file is well-commented.
 
 ## How to do stuff
 
