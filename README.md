@@ -1,3 +1,10 @@
+# Deprecated
+
+This repository is deprecated and no longer maintained. Use
+[react17-boilerplate](https://github.com/apeace/react17-boilerplate) instead.
+
+<hr />
+
 # react16-boilerplate
 
 A project template for a React 16 app, with Typescript and all the goodies.
@@ -174,10 +181,3 @@ switch to the [official version](https://github.com/rstacruz/jsdom-global) it sh
 
 -   Configure your text editor to format using `prettier`. Make sure it matches what `make fmt`
     does.
-
-## TODO
-
--   Font importing
--   Heroku config?
--   Server-side rendering?
--   Warning about relative path to node_modules in tsconfig
